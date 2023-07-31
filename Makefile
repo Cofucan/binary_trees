@@ -16,7 +16,7 @@ t1:
 t2:
 	$(CC) $(CFLAGS) $(PRINT) 2-main.c 2-binary_tree_insert_right.c 0-binary_tree_node.c -o 2-right $(DEBUG)
 t3:
-	$(CC) $(CFLAGS) $(PRINT) 3-main.c 3-binary_tree_delete.c 0-binary_tree_node.c -o 3-delete $(DEBUG)
+	$(CC) $(CFLAGS) $(PRINT) 3-main.c 3-binary_tree_delete.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 3-del $(DEBUG)
 t4:
 	$(CC) $(CFLAGS) $(PRINT) 4-main.c 4-binary_tree_is_leaf.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 4-leaf $(DEBUG)
 t5:
