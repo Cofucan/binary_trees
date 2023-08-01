@@ -7,7 +7,7 @@ PRINT = binary_tree_print.c
 all: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18
 
 betty_all:
-	betty $(HEADER) ls *.c | grep -v main.c
+	betty $(HEADER) $(ls *.c | grep -v main.c)
 
 t0:
 	$(CC) $(CFLAGS) $(PRINT) 0-main.c 0-binary_tree_node.c -o 0-node $(DEBUG)
@@ -16,7 +16,7 @@ t1:
 t2:
 	$(CC) $(CFLAGS) $(PRINT) 2-main.c 2-binary_tree_insert_right.c 0-binary_tree_node.c -o 2-right $(DEBUG)
 t3:
-	$(CC) $(CFLAGS) $(PRINT) 3-main.c 3-binary_tree_delete.c 0-binary_tree_node.c -o 3-delete $(DEBUG)
+	$(CC) $(CFLAGS) $(PRINT) 3-main.c 3-binary_tree_delete.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 3-del $(DEBUG)
 t4:
 	$(CC) $(CFLAGS) $(PRINT) 4-main.c 4-binary_tree_is_leaf.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 4-leaf $(DEBUG)
 t5:
