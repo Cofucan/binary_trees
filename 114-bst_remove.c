@@ -22,7 +22,7 @@ bst_t *bst_find_min(bst_t *root)
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
-	bst_t *min_right, *min_left, *temp;
+	bst_t *min_right, *temp;
 
 	if (root == NULL)
 		return (NULL);
