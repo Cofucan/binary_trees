@@ -55,7 +55,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
  *
  * This function checks if a binary tree is complete. A complete binary tree
  * is a b-tree in which every level, except possibly the last, is completely
- * filled, and all nodes are as far left as possible. It calls the bt_is_complete
+ * filled, and all nodes are as far left as possible. It calls the helper
  * function to check the completeness of the tree.
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
