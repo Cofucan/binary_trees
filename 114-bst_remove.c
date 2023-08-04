@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "binary_trees.h"
 
 /**
@@ -11,7 +10,7 @@ bst_t *bst_find_min(bst_t *root)
 {
 	while (root && root->left)
 		root = root->left;
-	return root;
+	return (root);
 }
 
 /**
@@ -23,8 +22,10 @@ bst_t *bst_find_min(bst_t *root)
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
+	bst_t *min_right, *min_left, *temp;
+
 	if (root == NULL)
-		return NULL;
+		return (NULL);
 
 	if (value < root->n)
 		root->left = bst_remove(root->left, value);
@@ -35,21 +36,21 @@ bst_t *bst_remove(bst_t *root, int value)
 		/* Node with only one child or no child */
 		if (root->left == NULL)
 		{
-			bst_t *temp = root->right;
+			temp = root->right;
 			free(root);
-			return temp;
+			return (temp);
 		}
 		else if (root->right == NULL)
 		{
-			bst_t *temp = root->left;
+			temp = root->left;
 			free(root);
-			return temp;
+			return (temp);
 		}
 
-		/* Node with two children: get the in-order successor (smallest in the right subtree) */
-		bst_t *min_right = bst_find_min(root->right);
+		/* Node with two children: get the (smallest in the right subtree) */
+		min_right = bst_find_min(root->right);
 		root->n = min_right->n;
 		root->right = bst_remove(root->right, min_right->n);
 	}
-	return root;
+	return (root);
 }
