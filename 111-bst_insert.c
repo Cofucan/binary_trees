@@ -41,7 +41,11 @@ bst_t *bst_insert(bst_t **tree, int value)
 		(*tree)->right = binary_tree_node(*tree, value);
 		return ((*tree)->right);
 	}
+	/* If the value is equal to the current node's value, just return NULL */
+	else if (value == (*tree)->n)
+	{
+		return (NULL);
+	}
 
-	/* If the value is equal to the current node's value, do not insert again */
 	return (*tree);
 }
