@@ -32,7 +32,7 @@ bst_t *bst_remove(bst_t *root, int value)
 		root->right = bst_remove(root->right, value);
 	else
 	{
-		// Node with only one child or no child
+		/* Node with only one child or no child */
 		if (root->left == NULL)
 		{
 			bst_t *temp = root->right;
@@ -46,7 +46,7 @@ bst_t *bst_remove(bst_t *root, int value)
 			return temp;
 		}
 
-		// Node with two children: get the in-order successor (smallest in the right subtree)
+		/* Node with two children: get the in-order successor (smallest in the right subtree) */
 		bst_t *min_right = bst_find_min(root->right);
 		root->n = min_right->n;
 		root->right = bst_remove(root->right, min_right->n);
