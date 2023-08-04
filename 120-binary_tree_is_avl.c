@@ -47,6 +47,8 @@ int binary_tree_height_h(const binary_tree_t *tree)
  */
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
+	int left_height, right_height;
+
 	if (tree == NULL)
 		return (0);
 
@@ -55,8 +57,9 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 		return (0);
 
 	/* Check if the difference between heights of left and right subtrees is at most one */
-	int left_height = binary_tree_height_h(tree->left);
-	int right_height = binary_tree_height_h(tree->right);
+	left_height = binary_tree_height_h(tree->left);
+	right_height = binary_tree_height_h(tree->right);
+
 	if (abs(left_height - right_height) > 1)
 		return (0);
 
