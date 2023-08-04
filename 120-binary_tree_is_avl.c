@@ -45,6 +45,7 @@ int binary_tree_height_h(const binary_tree_t *tree)
  *
  * Return: 1 if the tree is a valid AVL Tree, otherwise 0.
  */
+
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	int left_height, right_height;
