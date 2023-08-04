@@ -7,7 +7,7 @@ PRINT = binary_tree_print.c
 all: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25 t26 t27 t28 t30 t31 t32 t33 t34 t36 t37 t38 t39 t40
 
 betty_all:
-	betty $(HEADER) $(ls *.c | grep -v main.c)
+	betty $(HEADER) $$(ls *.c | grep -v main.c)
 
 t0:
 	$(CC) $(CFLAGS) $(PRINT) 0-main.c 0-binary_tree_node.c -o 0-node $(DEBUG)
@@ -47,43 +47,43 @@ t17:
 	$(CC) $(CFLAGS) $(PRINT) 17-main.c 17-binary_tree_sibling.c 0-binary_tree_node.c -o 17-sibling $(DEBUG)
 t18:
 	$(CC) $(CFLAGS) $(PRINT) 18-main.c 18-binary_tree_uncle.c 0-binary_tree_node.c -o 18-uncle $(DEBUG)
-t19:
+t100:
 	$(CC) $(CFLAGS) $(PRINT) 100-main.c 100-binary_trees_ancestor.c 0-binary_tree_node.c -o 100-ancestor $(DEBUG)
-t20:
+t101:
 	$(CC) $(CFLAGS) $(PRINT) 101-main.c 101-binary_tree_levelorder.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 101-lvl $(DEBUG)
-t21:
+t102:
 	$(CC) $(CFLAGS) $(PRINT) 102-main.c 102-binary_tree_is_complete.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 102-complete $(DEBUG)
-t22:
+t103:
 	$(CC) $(CFLAGS) $(PRINT) 103-binary_tree_rotate_left.c 103-main.c 0-binary_tree_node.c -o 103-rotl $(DEBUG)
-t23:
+t104:
 	$(CC) $(CFLAGS) $(PRINT) 104-binary_tree_rotate_right.c 104-main.c 0-binary_tree_node.c -o 104-rotr $(DEBUG)
-t24:
+t110:
 	$(CC) $(CFLAGS) $(PRINT) 110-main.c 110-binary_tree_is_bst.c 0-binary_tree_node.c -o 110-is_bst $(DEBUG)
-t25:
+t111:
 	$(CC) $(CFLAGS) $(PRINT) 111-bst_insert.c 111-main.c 0-binary_tree_node.c -o 111-bst_insert $(DEBUG)
-t26:
+t112:
 	$(CC) $(CFLAGS) $(PRINT) 112-array_to_bst.c 112-main.c 111-bst_insert.c 0-binary_tree_node.c -o 112-bst_array $(DEBUG)
-t27:
+t113:
 	$(CC) $(CFLAGS) $(PRINT) 113-bst_search.c 113-main.c 112-array_to_bst.c 111-bst_insert.c 0-binary_tree_node.c -o 113-bst_search $(DEBUG)
-t28:
+t114:
 	$(CC) $(CFLAGS) $(PRINT) 114-bst_remove.c 114-main.c 112-array_to_bst.c 111-bst_insert.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 114-bst_rm $(DEBUG)
-t30:
+t120:
 	$(CC) $(CFLAGS) $(PRINT) 120-main.c 120-binary_tree_is_avl.c 0-binary_tree_node.c -o 120-is_avl $(DEBUG)
-t31:
+t121:
 	$(CC) $(CFLAGS) $(PRINT) 121-avl_insert.c 121-main.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c 0-binary_tree_node.c -o 121-avl_insert $(DEBUG)
-t32:
+t122:
 	$(CC) $(CFLAGS) $(PRINT) 122-array_to_avl.c 122-main.c 121-avl_insert.c 0-binary_tree_node.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c -o 122-avl_array $(DEBUG)
-t33:
+t123:
 	$(CC) $(CFLAGS) $(PRINT) 123-avl_remove.c 123-main.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c 122-array_to_avl.c 121-avl_insert.c 14-binary_tree_balance.c 3-binary_tree_delete.c 0-binary_tree_node.c -o 123-avl_rm $(DEBUG)
-t34:
+t124:
 	$(CC) $(CFLAGS) $(PRINT) 124-main.c 124-sorted_array_to_avl.c 0-binary_tree_node.c -o 124-avl_sorted $(DEBUG)
-t36:
+t130:
 	$(CC) $(CFLAGS) $(PRINT) 130-main.c 130-binary_tree_is_heap.c 0-binary_tree_node.c -o 130-is_heap $(DEBUG)
-t37:
+t131:
 	$(CC) $(CFLAGS) $(PRINT) 131-main.c 131-heap_insert.c 0-binary_tree_node.c -o 131-heap_insert $(DEBUG)
-t38:
+t132:
 	$(CC) $(CFLAGS) $(PRINT) 132-main.c 132-array_to_heap.c 131-heap_insert.c 0-binary_tree_node.c -o 132-heap_array $(DEBUG)
-t39:
+t133:
 	$(CC) $(CFLAGS) $(PRINT) 133-main.c 133-heap_extract.c 132-array_to_heap.c 131-heap_insert.c 3-binary_tree_delete.c -o 133-heap_extract $(DEBUG)
-t40:
+t134:
 	$(CC) $(CFLAGS) $(PRINT) 134-main.c 134-heap_to_sorted_array.c 133-heap_extract.c 132-array_to_heap.c 131-heap_insert.c -o 134-heap_sort $(DEBUG)
